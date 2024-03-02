@@ -3,7 +3,9 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const postRoutes = require('./routes/post-routes.js');
+const apiPostRoutes = require('./routes/api-post-routes.js');
 const createPath = require('./helpers/createPath.js');
+const Post = require('./models/post');
 
 const app = express();
 
@@ -30,6 +32,8 @@ app.use(express.urlencoded({ extends: false }));
 app.use(methodOverride('_method'));
 
 app.use(postRoutes);
+
+app.use(apiPostRoutes);
 
 app.get('/', (req, res) => {
 	res.render(createPath('index'), { title: 'Home' });
