@@ -260,3 +260,7 @@ h2 a {
 	justify-content: center;
 	align-items: center;
 }
+input,
+textarea {
+	margin-top: 5px;
+}
