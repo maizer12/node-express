@@ -238,3 +238,25 @@ article {
 h2 a {
 	color: aqua;
 }
+.article-item {
+	position: relative;
+}
+.btn-delete,
+.btn-edit {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 41px;
+	height: 34px;
+	background-color: rgb(0, 48, 48);
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+}
+.btn-edit {
+	right: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
